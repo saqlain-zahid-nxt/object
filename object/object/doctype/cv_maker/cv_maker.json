@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:name1",
+ "creation": "2025-04-28 15:35:29.033838",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "personal_info_section",
+  "name1",
+  "image",
+  "work",
+  "profile_description",
+  "phone_no",
+  "address",
+  "whatsapp_no"
+ ],
+ "fields": [
+  {
+   "fieldname": "personal_info_section",
+   "fieldtype": "Section Break",
+   "label": "Personal Info"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "work",
+   "fieldtype": "Data",
+   "label": "Work"
+  },
+  {
+   "fieldname": "profile_description",
+   "fieldtype": "Small Text",
+   "label": "Profile Description"
+  },
+  {
+   "fieldname": "phone_no",
+   "fieldtype": "Phone",
+   "label": "Phone No."
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "whatsapp_no",
+   "fieldtype": "Phone",
+   "label": "Whatsapp No."
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-04-28 15:51:34.645785",
+ "modified_by": "Administrator",
+ "module": "Object",
+ "name": "Cv Maker",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
