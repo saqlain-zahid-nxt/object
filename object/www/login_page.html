@@ -1,84 +1,151 @@
-{% block content %}
 <style>
-    /* login.css */
 body {
-    background-color: #121212;
-    color: #eaeaea;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: 20px;
 }
-
-.login-container {
-    max-width: 400px;
-    margin: 100px auto;
-    background-color: #1e1e1e;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
-
-h2 {
+.dates p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+.dates strong {
+    display: inline-block;
+    width: 120px; /* Adjusts spacing to match the image alignment */
+}
+.row_1{
+}
+thead {
     text-align: center;
-    color: #fff;
 }
-
-form {
-    display: flex;
-    flex-direction: column;
+body:last-child .print-format td .logo{
+    width: 42% !important;
+    margin-right: 207px;
+    padding-bottom: 50px;
 }
-
-label {
-    color: #fff;
-    margin-bottom: 5px;
+.1st_div{
+    padding:100px;
 }
-
-input {
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
-    background-color: #2c2c2c;
-    color: #fff;
+thead img {
+    width: 50px;
+    vertical-align: middle;
 }
-
-button {
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+thead h1 {
+    display: inline;
+    margin-left: 10px;
+    font-size: 24px;
 }
-
-button:hover {
-    background-color: #0056b3;
+tbody td {
+    padding: 8px;
+    vertical-align: top;
+    width: 50%;
 }
-
-.signup-link {
-    text-align: center;
+.items-table {
+    width: 100%;
+    border: 1px solid #000;
     margin-top: 10px;
-    color: #fff;
 }
-
-.signup-link a {
-    color: #007bff;
-    text-decoration: none;
+.items-table th, .items-table td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: center;
 }
-
+.items-table th {
+    background-color: #333;
+    color: white;
+}
+.summary {
+    margin-top: 10px;
+    text-align: right;
+}
+.summary p {
+    margin: 5px 0;
+}
+.tax-summary {
+    margin-top: 20px;
+    text-align: left;
+}
 </style>
-<body>
-    <div class="login-container">
-        <h2>Login</h2>
-        <form id="login-form">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit">Login</button>
-        </form>
-        <p class="signup-link">Don't have an account? <a href="./sign_up_page.html">Sign up</a></p>
-    </div>
-</body>
-{% endblock %}
+
+<table>
+    <thead>
+        <tr>
+            <td>
+                <img class="logo" src="http://127.0.0.1:8000/files/Screenshot%20from%202025-04-30%2016-39-18.png" alt="Daily Corporation Logo">
+            </td>
+            <td>
+                <h1>CREDIT NOTE</h1>
+                <p># CN-00113</p>
+                <p>Credits Remaining: SAR45,339.00</p>
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="row_1">
+            <td>
+                <p>8566</p>
+                <p>23442</p>
+                <p>Saudi Arabia</p>
+                <p>TRN 31 0013538100003</p>
+                <p>accounts@dailycorp-sa.com</p>
+            </td>
+            <td></td>
+        </tr>
+        <div class="1st_div">
+        <tr>
+            <td>
+                <p><strong>Bill To</strong></p>
+                <p><strong> Jabal Omar Development Company</strong></p>
+                <p>6850</p>
+                <p>Jabal Omar</p>
+                <p>Makkah</p>
+                <p>Saudi Arabia</p>
+                <p>TRN 300222730700003</p>
+            </td>
+            <td class="dates">
+                <p><strong>Credit Date :</strong> 28 Apr 2025</p>
+                <p><strong>Invoice# :</strong> INV-0008862</p>
+                <p><strong>Invoice Date :</strong> 31 Mar 2025</p>
+            </td>
+        </tr>
+        </div>
+        <tr>
+            <td colspan="2">
+                <table class="items-table">
+                    <tr>
+                        <th>#</th>
+                        <th>Item Description</th>
+                        <th>QTY</th>
+                        <th>Rate</th>
+                        <th>Tax %</th>
+                        <th>Tax</th>
+                        <th>Amount</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>IQMA</td>
+                        <td>1.00 pcs</td>
+                        <td>45,339.00</td>
+                        <td>0.00%</td>
+                        <td>0.00</td>
+                        <td>45,339.00</td>
+                    </tr>
+                </table>
+                <div class="summary">
+                    <p>Sub Total: 45,339.00</p>
+                    <p>Zero Rate (0%): 0.00</p>
+                    <p><strong>TOTAL: SAR45,339.00</strong></p>
+                    <p>Credits Remaining: SAR45,339.00</p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="tax-summary">
+                <p><strong>TAX SUMMARY</strong></p>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -20,7 +20,7 @@ app_license = "mit"
 # 		"has_permission": "object.api.permission.has_app_permission"
 # 	}
 # ]
-
+has_timeline = ['Email Sender']
 # Includes in <head>
 # ------------------
 
